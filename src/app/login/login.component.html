@@ -1,0 +1,45 @@
+<div class="conatiner mt-5">
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="p-4 border border-3 shadow">
+               <form action="" [formGroup]="signInForm" (ngSubmit)="login()">
+
+                <h1 class="fw-bold text-center my-2">Login</h1>
+
+                <div class="mb-3">
+                    <label for="">Username</label>
+                    <input type="text" class="form-control" placeholder="enter  username" formControlName="username">
+                    <div class="form-text text-danger" *ngIf="username?.touched && username?.invalid">enter valid username</div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" placeholder="enter password" formControlName="password">
+                    <div class="form-text text-danger" *ngIf="password?.touched && password?.invalid">enter valid password</div>
+
+                </div>
+
+                <div class="mb-3">
+                  
+                    <input type="submit" 
+                    class="form-control btn btn-outline-info"  
+                 
+                    value="Login"
+
+                    [disabled]="signInForm.invalid"
+                  
+                    >
+                </div>
+               </form>
+                <div class="mb-3">
+                  
+                
+                </div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

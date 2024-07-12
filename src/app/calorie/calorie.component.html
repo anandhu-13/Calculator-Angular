@@ -1,0 +1,60 @@
+<div class="conatiner mt-5">
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="p-4 border border-3 shadow">
+                <h1 class="fw-bold text-center my-2">CALORIE CALCULATOR</h1>
+
+                <div class="mb-3">
+                    <label for="">enter height in cm</label>
+                    <input type="text" class="form-control" placeholder="enter  height" [(ngModel)]="height">
+                </div>
+                <div class="mb-3">
+                    <label for="">enter Weight in kg</label>
+                    <input type="text" class="form-control" placeholder="enter  weight in kg" [(ngModel)]="weight">
+                </div>
+
+                <div class="mb-3">
+                    <label for="">enter age </label>
+                    <input type="text" class="form-control" placeholder="enter age" [(ngModel)]="age" >
+                </div>
+
+                <div class="mb-3">
+
+                    <label for="">select gender</label>
+
+                    <select name="" id="" class="form-select" [(ngModel)]="gender">
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="">select activity level</label>
+                    <select name="" id="" class="form-select" [(ngModel)]="activityLevel">
+                        <option [value]="a.value" *ngFor="let a of activityLevels">{{a.name}}</option>
+                    </select>
+                </div>
+
+
+                <div class="mb-3">
+                  
+                    <input type="button" 
+                    class="form-control btn btn-outline-info"        
+                    (click)="calculateCalorie()"         
+                 
+                    value="Calculate"
+                   
+                    >
+                </div>
+                <div class="mb-3">
+                    Calories to maintain weight = {{bmr}} Calories
+                  
+                 
+                </div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
